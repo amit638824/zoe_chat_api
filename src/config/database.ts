@@ -68,3 +68,23 @@ export const closePool = async (): Promise<void> => {
     pool = null;
   }
 };
+
+export const testConnection = async (): Promise<{
+  ok: boolean;
+  message: string;
+  tables?: string[];
+}> => {
+  try {
+    const connection = await getPool().getConnection();
+    const [rows] = await connection.query<RowDataPacket[]>("SHOW TABLES");
+    const tables = rows.map((row) => String(Object.values(row)[0]));
+    connection.release();
+    return { ok: true, message: "Database connected", tables };
+  } catch (error) {
+    const err = error as Error & { sqlMessage?: string };
+    return {
+      ok: false,
+      message: err.sqlMessage || err.message || "Database connection failed",
+    };
+  }
+};

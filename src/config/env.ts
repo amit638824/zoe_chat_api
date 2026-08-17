@@ -53,8 +53,8 @@ export const env: EnvConfig = {
   db: {
     host: getEnv("DB_HOST", "s12078.use1.stableserver.net"),
     port: getEnvNumber("DB_PORT", 3306),
-    user: getEnv("DB_USER", "root"),
-    password: getEnv("DB_PASSWORD", ""),
+    user: getEnv("DB_USER", "techwagger_zoe_user"),
+    password: getEnv("DB_PASSWORD", "Tl$VwA]N(na6H!94"),
     database: getEnv("DB_NAME", "techwagger_zoe_chat"),
   },
 
