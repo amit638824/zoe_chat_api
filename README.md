@@ -1,6 +1,10 @@
 # ZOE Chat API
 
-Real-time chat backend extracted and refactored from `if_api` chat functionality. Built with **Node.js**, **Express**, **TypeScript**, **MySQL**, **Socket.IO**, and **express-fileupload**.
+Live: **https://chatapizoe.techwagger.com**
+
+Real-time chat backend — Node.js, Express, TypeScript, MySQL, Socket.IO.
+
+**Flutter app me chat lagane ke liye pura flow:** [FLUTTER_CHAT.md](./FLUTTER_CHAT.md)
 
 ## Features
 
